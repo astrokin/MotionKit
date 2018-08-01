@@ -22,28 +22,22 @@ You can retrieve all the values either by a trailing closure or by a delegate me
 
 *__Note:__* All the provided methods are Asynchronous and operate in their own Queue so that your app could run smoothly and efficiently.
 
-##Initialise
+## Initialise
 First, initialise the MotionKit instance. Its a Must.
 
-<div align="right" style="color:#FE834C">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     let motionKit = MotionKit()
 ```
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     MotionKit *motionKit = [[NSClassFromString(@"MotionKit") alloc] init];
 ```
 
-##Getting Accelerometer Values
+## Getting Accelerometer Values
 You can get the accelerometer values using just a few lines of code.
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getAccelerometerValues(interval: 1.0){
         (x, y, z) in
@@ -52,21 +46,17 @@ You can get the accelerometer values using just a few lines of code.
       }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getAccelerometerValuesWithInterval:1.0 values:^(double x, double y, double z) {
         // your values here
     }];
 ```
 
-##Getting Gyroscope Values
+## Getting Gyroscope Values
 Gyroscope values could be retrieved by the following few lines of code.
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getGyroValues(interval: 1.0){
         (x, y, z) in
@@ -84,12 +74,10 @@ Gyroscope values could be retrieved by the following few lines of code.
     }];
 ```
 
-##Getting Magnetometer Values
+## Getting Magnetometer Values
 Getting Magnetometer values is as easy as grabbing a cookie.
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getMagnetometerValues(interval: 1.0){
         (x, y, z) in
@@ -109,7 +97,7 @@ Getting Magnetometer values is as easy as grabbing a cookie.
 
 #Installation
 Embedded frameworks require a minimum deployment target of iOS 8.
-###— Using CocoaPods
+### Using CocoaPods
 Just add this to your Podfile.
 ```ruby
 pod 'MotionKit'
@@ -120,13 +108,13 @@ Note that you have to use CocoaPods version 0.36, the pre-released version which
 ```
 
 
-###— Using Carthage
+### Using Carthage
 You can use [Carthage](https://github.com/Carthage/Carthage) to install `MotionKit` by adding the following line to your `Cartfile`.
 ```ruby
   github "MHaroonBaig/MotionKit"
 ```
 
-###— Manual Installation
+### Manual Installation
 Just copy the `MotionKit.swift` file into your Xcode project folder, and you're ready to go.
 
 #CMDeviceMotion - as easy as pie
@@ -144,11 +132,9 @@ The deviceMotion object includes:
 
 All of the values can be retrieved either by individual methods or by getting the deviceMotion object itself.
 
-###Getting the whole CMDeviceMotion Object
+### Getting the whole CMDeviceMotion Object
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
 
     motionKit.getDeviceMotionObject(interval: 1.0){
@@ -173,7 +159,7 @@ All of the values can be retrieved either by individual methods or by getting th
 
 ```
 
-###Getting refined values of Acceleration
+### Getting refined values of Acceleration
 
 You can get the refined and processed userAccelaration through the Device Motion service by just a few lines of code, either by a Trailing Closure or through Delegation method.
 
@@ -198,12 +184,10 @@ You can get the refined and processed userAccelaration through the Device Motion
     }];
 ```
 
-###Getting Gravitational Acceleration
+### Getting Gravitational Acceleration
 Again, you can access it through the Device Motion service as well.
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
       motionKit.getGravityAccelerationFromDeviceMotion(interval: 1.0) {
           (x, y, z) -> () in
@@ -221,7 +205,7 @@ Again, you can access it through the Device Motion service as well.
     }];
 ```
 
-###Getting Magnetic Field around your device
+### Getting Magnetic Field around your device
 Interesting, Get it in a magical way.
 
 <div align="right">
@@ -245,11 +229,9 @@ Interesting, Get it in a magical way.
     }];
 ```
 
-###Getting the Attitude metrics
+### Getting the Attitude metrics
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
       motionKit.getAttitudeFromDeviceMotion(interval: 1.0) {
         (attitude) -> () in
@@ -271,11 +253,9 @@ Interesting, Get it in a magical way.
    }];
 ```
 
-###Getting Rotation Rate of your device
+### Getting Rotation Rate of your device
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
       motionKit.getRotationRateFromDeviceMotion(interval: 1.0) {
         (x, y, z) -> () in
@@ -297,7 +277,7 @@ Interesting, Get it in a magical way.
 
 
 
-##Precautions
+## Precautions
 For performance issues, it is suggested that you should use only one instance of CMMotionManager throughout the app. Make sure to stop receiving updates from the sensors as soon as you get your work done.
 You can do this in MotionKit like this.
 ```swift
@@ -310,7 +290,7 @@ You can do this in MotionKit like this.
 
 ```
 
-##Delegates
+## Delegates
 In case if you dont want to use the trailing closures, we've got you covered. MotionKit supports the following Delegate methods to retrieve the sensor values.
 ```swift
     optional func retrieveAccelerometerValues (x: Double, y:Double, z:Double, absoluteValue: Double)
@@ -355,10 +335,10 @@ Having that done, you'd probably want to implement a delegate method like this.
 
 ```
 
-##Getting just a single value at an instant
+## Getting just a single value at an instant
 if you want to get just a single value of any of the available sensors at a given time, you could probably use some of the our handy methods provided in MotionKit.
 
-###Accelerometer
+### Accelerometer
 
 <div align="right">
 <h7><i>Swift</i></h7>
@@ -379,7 +359,7 @@ if you want to get just a single value of any of the available sensors at a give
     }];
 ```
 
-###Gravitational Acceleration
+### Gravitational Acceleration
 
 <div align="right">
 <h7><i>Swift</i></h7>
@@ -400,7 +380,7 @@ if you want to get just a single value of any of the available sensors at a give
     }];
 ```
 
-###Attitude
+### Attitude
 
 <div align="right">
 <h7><i>Swift</i></h7>
@@ -421,7 +401,7 @@ if you want to get just a single value of any of the available sensors at a give
     }];
 ```
 
-###Magnetic Field
+### Magnetic Field
 
 <div align="right">
 <h7><i>Swift</i></h7>
@@ -442,7 +422,7 @@ if you want to get just a single value of any of the available sensors at a give
     }];
 ```
 
-###Gyroscope Values
+### Gyroscope Values
 
 <div align="right">
 <h7><i>Swift</i></h7>
@@ -465,7 +445,7 @@ if you want to get just a single value of any of the available sensors at a give
 
 
 
-#Discussion
+# Discussion
 - You can join our [Reddit] (https://www.reddit.com/r/MotionKit/) channel to discuss anything.
 
 - You can also open an issue here for any kind of feature set that you want. We would love to hear from you.
@@ -475,13 +455,13 @@ if you want to get just a single value of any of the available sensors at a give
 - Our StackOverflow tag is 'MotionKit'
 
 
-#Requirements
+# Requirements
 * iOS 7.0+
 * Xcode 6.1
 
-#TODO
+# TODO
 - [ ] Add More Methods
 - [ ] Adding Background Functionality
 
-#License
+# License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
