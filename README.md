@@ -117,7 +117,7 @@ You can use [Carthage](https://github.com/Carthage/Carthage) to install `MotionK
 ### Manual Installation
 Just copy the `MotionKit.swift` file into your Xcode project folder, and you're ready to go.
 
-#CMDeviceMotion - as easy as pie
+# CMDeviceMotion - as easy as pie
 In case if you want to get the processed values of Accelerometer or Gyroscope, you can access the deviceMotion object directly to get those values, or, you can access the individual values from the standalone methods which work seamlessly with Trailing Closures and Delegates.
 
 The deviceMotion object includes:
@@ -149,9 +149,7 @@ All of the values can be retrieved either by individual methods or by getting th
 
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
 [motionKit getDeviceMotionObjectWithInterval:1.0 values:^(CMDeviceMotion *deviceMotion) {
     // Your values here
@@ -175,9 +173,7 @@ You can get the refined and processed userAccelaration through the Device Motion
         }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getAccelerationFromDeviceMotion:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -196,9 +192,7 @@ Again, you can access it through the Device Motion service as well.
       }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getGravityAccelerationFromDeviceMotion:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -220,9 +214,7 @@ Interesting, Get it in a magical way.
 
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getMagneticFieldFromDeviceMotion:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -244,9 +236,7 @@ Interesting, Get it in a magical way.
         }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getAttitudeFromDeviceMotionWithInterval:1.0 values:^(CMAttitude *attitude) {
         // Your values here
@@ -265,9 +255,7 @@ Interesting, Get it in a magical way.
 
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getRotationRateFromDeviceMotion:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -350,9 +338,7 @@ if you want to get just a single value of any of the available sensors at a give
       }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getAccelerationAtCurrentInstant:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -371,9 +357,7 @@ if you want to get just a single value of any of the available sensors at a give
         }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getAccelerationAtCurrentInstant:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -392,9 +376,7 @@ if you want to get just a single value of any of the available sensors at a give
         }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getAttitudeAtCurrentInstant:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -413,9 +395,7 @@ if you want to get just a single value of any of the available sensors at a give
         }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getMageticFieldAtCurrentInstant:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -434,9 +414,7 @@ if you want to get just a single value of any of the available sensors at a give
         }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getGyroValuesAtCurrentInstant:1.0 values:^(double x, double y, double z) {
         // your values here
