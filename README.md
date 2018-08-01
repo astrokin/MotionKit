@@ -1,4 +1,4 @@
-#[MotionKit] (http://goo.gl/bpXBlO) — The missing iOS wrapper :notes:
+# [MotionKit] (http://goo.gl/bpXBlO) — The missing iOS wrapper :notes:
 
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
