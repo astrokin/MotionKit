@@ -65,9 +65,7 @@ Gyroscope values could be retrieved by the following few lines of code.
       }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getGyroValues:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -86,9 +84,7 @@ Getting Magnetometer values is as easy as grabbing a cookie.
       }
 ```
 
-<div align="right">
-<h7><i>Objective-C</i></h7>
-</div>
+### Objective-C
 ```objective-c
     [motionKit getMagnetometerValues:1.0 values:^(double x, double y, double z) {
         // your values here
@@ -161,9 +157,7 @@ All of the values can be retrieved either by individual methods or by getting th
 
 You can get the refined and processed userAccelaration through the Device Motion service by just a few lines of code, either by a Trailing Closure or through Delegation method.
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 
 ```swift
     motionKit.getAccelerationFromDeviceMotion(interval: 1.0){
@@ -202,9 +196,7 @@ Again, you can access it through the Device Motion service as well.
 ### Getting Magnetic Field around your device
 Interesting, Get it in a magical way.
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
       motionKit.getMagneticFieldFromDeviceMotion(interval: 1.0) {
         (x, y, z, accuracy) -> () in
@@ -328,9 +320,7 @@ if you want to get just a single value of any of the available sensors at a give
 
 ### Accelerometer
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getAccelerationAtCurrentInstant {
         (x, y, z) -> () in
@@ -347,9 +337,7 @@ if you want to get just a single value of any of the available sensors at a give
 
 ### Gravitational Acceleration
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getAccelerationAtCurrentInstant {
       (x, y, z) -> () in
@@ -385,9 +373,7 @@ if you want to get just a single value of any of the available sensors at a give
 
 ### Magnetic Field
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getMageticFieldAtCurrentInstant {
       (x, y, z) -> () in
@@ -404,9 +390,7 @@ if you want to get just a single value of any of the available sensors at a give
 
 ### Gyroscope Values
 
-<div align="right">
-<h7><i>Swift</i></h7>
-</div>
+### Swift
 ```swift
     motionKit.getGyroValuesAtCurrentInstant {
       (x, y, z) -> () in
